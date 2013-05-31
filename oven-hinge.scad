@@ -1,8 +1,13 @@
 //Replacement hinge for oven part
+//
+// * disable
+// ! show only
+// # highlight
+// % transparent
 
 inches = 25.4;  // inches to mm
 
-base_width = 1.13   *inches;
+base_width = 1.125  *inches;
 base_depth =  .915  *inches;
 base_thick =  .1    *inches;
 
