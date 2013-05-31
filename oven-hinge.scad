@@ -1,15 +1,17 @@
 //Replacement hinge for oven part
 
-base_width = 25;
-base_depth = 25;
-base_thick = 3;
+inches = 25.4;  // inches to mm
 
-back_height = 10;
+base_width = 1.13   *inches;
+base_depth =  .915  *inches;
+base_thick =  .1    *inches;
+
+back_height = .5    *inches;
 back_width = base_width;
-back_thick = 3;
+back_thick = .155   *inches;
 
-post_r = 1.5;
-post_h = 5;
+post_r = .123/2 *inches;
+post_h = .2     *inches;
 
 union(){
     translate([0,-base_depth/2+back_thick/2,back_height/2 + base_thick/2]){
