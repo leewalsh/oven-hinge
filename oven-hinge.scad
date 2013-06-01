@@ -33,7 +33,11 @@ module hole(){
     r2 = cone_slope * h + r1;
     rotate([-90,0,0]){ union(){
         cylinder(h=h,r1=r1,r2=r2, center=true); 
-        cylinder(h=2*h, r=hole_r, center=true);}
+        cylinder(h=2*h, r=hole_r, center=true);
+        translate([0,back_height/2,(.075*inches-back_thick)/2]){
+            cube([hole_r*2,back_height,back_thick-.075*inches], center=true);
+        }
+        }
     }
 }
 
