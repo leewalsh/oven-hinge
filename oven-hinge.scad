@@ -40,6 +40,7 @@ module hole(){
         }
     }
 }
+module nub(){ cube([nub_width,nub_depth,base_thick]); }
 
 difference(){
     union(){
@@ -47,6 +48,7 @@ difference(){
         translate([0,-base_depth/2+back_thick/2,back_height/2]){back();}
         translate([post_r - base_width/2, base_depth/2-post_r, base_thick]){post();}
         translate([base_width/2 - post_r, base_depth/2-post_r, base_thick]){post();}
+        translate([-nub_width/2,base_depth/2,0]){nub();}
     }
     translate([0, .075/2 + back_thick/2-base_depth/2, .2*inches+hole_r]){hole();}
 }
